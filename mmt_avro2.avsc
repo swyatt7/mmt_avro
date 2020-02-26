@@ -1,0 +1,7 @@
+{"namespace": "mmt_target.avro",
+ "type": "record",
+ "name": "target",
+ "fields": [
+     {"name": "ObjectId", "type": "string"}
+ ]
+}
