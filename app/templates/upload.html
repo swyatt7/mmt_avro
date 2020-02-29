@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.column {
+float: left;
+width: 50%;
+padding: 10px;
+}
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+
+<div class="container">
+
+	<h2>MMT Target Upload Example</h2>
+	
+	{% for t in targets%}
+		<div class="column">
+			<p>Name: {{ t['ObjectID'] }}</p>
+			<p>RA: {{ t['RA'] }} DEC: {{ t['DEC'] }}</p>
+			<p>RAPM: {{ t['RAPM'] }} DECPM: {{ t['DECPM'] }}</p>
+			<p>MAG: {{ t['MAG'] }}</p>
+			<p>EQUINOX: {{ t['EQUINOX'] }}</p>
+		</div>
+
+		<div class="column">
+				<img style="width: 500px; height: 700px" src="/static/{{ t['FinderFile'] }}">
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}}
+

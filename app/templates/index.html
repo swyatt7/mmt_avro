@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.column {
+float: left;
+width: 50%;
+padding: 10px;
+}
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+<div class="container" style="text-align: left">
+
+    <h2>MMT Target Upload Example</h2>
+
+    {% for u in uploads %}
+        <p><a href="/upload?file={{ u }}">{{ u }}</a></p>
+    {% endfor %}
+
+</div>
+{% endblock %}}
+

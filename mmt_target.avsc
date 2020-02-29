@@ -1,0 +1,15 @@
+{"namespace": "mmt_target.avro",
+ "type": "record",
+ "name": "target",
+ "fields": [
+     {"name": "ObjectID", "type": "string"},
+     {"name": "RA",  "type": "float"},
+     {"name": "DEC",  "type": "float"},
+     {"name": "RAPM",  "type": "float"},
+     {"name": "DECPM",  "type": "float"},
+     {"name": "MAG",  "type": "float"},
+     {"name": "PA",  "type": "float"},
+     {"name": "EQUINOX", "type": "string"},
+     {"name": "FinderFile", "type":"string"}
+ ]
+}
